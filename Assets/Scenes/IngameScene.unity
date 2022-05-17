@@ -468,7 +468,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &208521611
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -5938,7 +5938,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   HP: 100
+  maxHP: 0
   moveSpeed: 2
+  circleCollider2D: {fileID: 0}
 --- !u!61 &397513054
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8886,6 +8888,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  maxHP: 100
+  HP: 100
+  damage: 10
+  CanDamage: 1
   speed: 1
   velo: {x: 0, y: 0, z: 0}
 --- !u!1 &1576116387
@@ -9445,7 +9451,7 @@ MonoBehaviour:
     Duration: 1
     Amount: 0
     MoveSpeed: 2
-    Magnet: 20
+    Magnet: 1
     Luck: 1
     Growth: 1
     Greed: 1

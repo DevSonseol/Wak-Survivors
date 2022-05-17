@@ -7,12 +7,16 @@ public class Monster : MonoBehaviour
     [SerializeField]
     private GameObject target;
 
+    [SerializeField]
     private float maxHP;
 
+    [SerializeField]
     private float HP;
 
+    [SerializeField]
     private float damage;
 
+    [SerializeField]
     private bool CanDamage = true;
 
     [SerializeField]
@@ -41,6 +45,13 @@ public class Monster : MonoBehaviour
   
     void Update()
     {
+        if(HP <= 0)
+        {
+            //사망처리
+            Debug.Log("Monster 사망처리");
+        }
+
+
         ChaseTarget();
     }
 
@@ -102,6 +113,7 @@ public class Monster : MonoBehaviour
 
             CanDamage = false;
             //플레이어 데미지
+            target.GetComponent<Player>().Get_Damage(damage);
 
 
             StartCoroutine(AttackDelay());

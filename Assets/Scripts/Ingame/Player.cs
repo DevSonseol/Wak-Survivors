@@ -9,6 +9,7 @@ public enum PlayerCharacter
 
 public class Player : MonoBehaviour
 {
+    private const float normalSize = 0.5f;
 
 
     [SerializeField]
@@ -21,22 +22,36 @@ public class Player : MonoBehaviour
 
     //private bool isMaxPowers = false;
 
+
+
+    //player 설정 할 것들
+
     [SerializeField]
     private float HP;
     [SerializeField]
+    private float maxHP;
+    [SerializeField]
     private float moveSpeed;
+
+    [SerializeField]
+    private CircleCollider2D circleCollider2D;
     private Rigidbody2D rigid2D;
     private Animator animator;
 
     void Awake()
     {
+        circleCollider2D = GetComponent<CircleCollider2D>();
         animator = GetComponent<Animator>();
         rigid2D = GetComponent<Rigidbody2D>();
     }
 
     void Start()
     {
-        moveSpeed = GameSystem.Instance.PlayerStatData.MoveSpeed;
+        moveSpeed = PlayerData.Instacne.Stat.MoveSpeed;
+        HP = PlayerData.Instacne.Stat.MaxHealth;
+        maxHP = PlayerData.Instacne.Stat.MaxHealth;
+
+        circleCollider2D.radius = normalSize * PlayerData.Instacne.Stat.Magnet;
     }
 
 
@@ -80,10 +95,16 @@ public class Player : MonoBehaviour
 
     }
 
-
     public void Get_Damage(float damage)
     {
         HP -= damage;
     }
+
+
+
+
+
+
+
 
 }

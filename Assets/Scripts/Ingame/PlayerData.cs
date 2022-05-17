@@ -33,20 +33,61 @@ public class PlayerData : MonoBehaviour
 
     private void Awake()
     {
-        //stat = GameSystem.Instance.PlayerStatData;
+        stat = GameSystem.Instance.PlayerStatData;
     }
-    void Start()
+
+
+    public void UpdatePlayerData(Powers power, float value)
     {
-        
+
+        switch (power)
+        {
+            case Powers.Might:
+                stat.Might += value;
+                break;
+            case Powers.Armor:
+                stat.Armor += value;
+                break;
+            case Powers.MaxHealth:
+                stat.MaxHealth += value;
+                break;
+            case Powers.Recovery:
+                stat.Recovery += value;
+                break;
+            case Powers.CoolDown:
+                stat.CoolDown += value;
+                break;
+            case Powers.Area:
+                stat.Area += value;
+                break;
+            case Powers.Speed:
+                stat.Speed += value;
+                break;
+            case Powers.Duration:
+                stat.Duration += value;
+                break;
+            case Powers.Amount:
+                stat.Amount += value;
+                break;
+            case Powers.MoveSpeed:
+                stat.MoveSpeed += value;
+                break;
+            case Powers.Magnet:
+                stat.Magnet += value;
+                break;
+            case Powers.Luck:
+                stat.Luck += value;
+                break;
+            case Powers.Growth:
+                stat.Growth += value;
+                break;
+            case Powers.Greed:
+                stat.Greed += value;
+                break;
+
+        }
+
     }
 
-  
-    void Update()
-    {
-        
-    }
-
-
-  
 
 }
