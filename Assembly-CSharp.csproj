@@ -90,11 +90,12 @@
     <Compile Include="Assets\TwitchIRC-Unity-master\TwitchChatExample.cs" />
     <Compile Include="Assets\Scripts\Lobby\LobbyUI.cs" />
     <Compile Include="Assets\Scripts\Ingame\PowerUISlot.cs" />
+    <Compile Include="Assets\Scripts\Ingame\Coin.cs" />
     <Compile Include="Assets\Scripts\Ingame\Power.cs" />
     <Compile Include="Assets\Scripts\Lobby\StatText.cs" />
     <Compile Include="Assets\Scripts\Shooter.cs" />
     <Compile Include="Assets\Scripts\Ingame\WeaponUI.cs" />
-    <Compile Include="Assets\Scripts\Ingame\Coin.cs" />
+    <Compile Include="Assets\Scripts\ObjectPool.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

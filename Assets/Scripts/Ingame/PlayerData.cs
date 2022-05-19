@@ -31,6 +31,15 @@ public class PlayerData : MonoBehaviour
     }
 
 
+    [SerializeField]
+    private int coin;
+
+    public void GainCoin(int _coin)
+    {
+        coin += _coin;
+    }
+
+
     private void Awake()
     {
         stat = GameSystem.Instance.PlayerStatData;
