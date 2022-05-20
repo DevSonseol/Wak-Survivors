@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum BulletCategory
 {
-    MagicWand
+    testBullet,MagicWand
 }
 
 public class ObjectPool :  MonoBehaviour
@@ -71,6 +71,7 @@ public class ObjectPool :  MonoBehaviour
         else
         {
             Bullet bullet = Instance.CreateBullet(_BC);
+            bulletpool.Enqueue(bullet);
             bullet.transform.SetParent(ObjectPool.Instance.transform);
             bullet.gameObject.SetActive(true);
             return bullet;

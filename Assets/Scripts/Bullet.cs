@@ -4,25 +4,32 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private Vector3 direction;
+    [SerializeField]
+    protected Vector3 direction;
 
     [SerializeField]
-    private float speed = 1;
+    protected float speed = 1;
 
-    public void Shoot(Vector3 dir)
+    [SerializeField]
+    protected BulletCategory category = BulletCategory.testBullet;
+
+    [SerializeField]
+    protected float damage;
+
+    public virtual void Shoot(Vector3 dir)
     {
         direction = dir;
         Invoke("DestroyBullet",2f);
     }
 
 
-    private void DestroyBullet()
+    protected void DestroyBullet()
     {
-        BulletObjectPool.ReturnBullet(this);
+        ObjectPool.ReturnBullet(this, this.category);
     }
 
 
-    void Update()
+    protected virtual void Update()
     {
         transform.Translate(direction * Time.deltaTime * speed);
     }

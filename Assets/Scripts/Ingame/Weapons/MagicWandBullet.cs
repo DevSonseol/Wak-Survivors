@@ -5,31 +5,35 @@ using UnityEngine;
 public class MagicWandBullet : Bullet
 {
 
-    [SerializeField]
-    private float damage;
-
-    [SerializeField]
-    private Vector3 dir;
-
-    [SerializeField]
-    private float speed;
-
-    private Transform transform;
-
     void Start()
     {
-        transform = this.gameObject.GetComponent<Transform>();
+
     }
 
-    void Update()
+    protected override void Update()
     {
-        transform.position += dir * speed * Time.deltaTime;
+        transform.position += direction * speed * Time.deltaTime;
     }
 
+    public override void Shoot(Vector3 dir)
+    {
+        direction = new Vector3(dir.x,dir.y,0);
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        Debug.Log(angle);
+        transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+        Invoke("DestroyBullet", 5f);
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //부딪힌 적에게 데미지   
+        if(collision.gameObject.tag == "Monster")
+        {
+            Invoke("DestroyBullet", 0f);
+            //충돌 후 데미지 주기
+            Debug.Log("MagicWandBullet OnTriggerEnter2D 몬스터 충돌");
+        }
     }
+
+
 
 }

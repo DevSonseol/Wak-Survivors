@@ -5,7 +5,7 @@ using UnityEngine;
 public class Shooter : MonoBehaviour
 {
     [SerializeField]
-    private GameObject bulletPrefab;
+    private GameObject[] bulletPrefab;
 
     Camera mainCam;
 
@@ -19,16 +19,36 @@ public class Shooter : MonoBehaviour
   
     void Update()
     {
-        if(Input.GetMouseButton(0))
-        {
-            mouseDir = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y, -Camera.main.transform.position.z));
-            mouseDir -=transform.position;
+        //if(Input.GetMouseButton(0))
+        //{
+        //    mouseDir = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y, -Camera.main.transform.position.z));
+        //    mouseDir -=transform.position;
 
-            var bullet = BulletObjectPool.GetBullet();
+        //    var bullet = BulletObjectPool.GetBullet();
+        //    bullet.transform.position = transform.position + mouseDir.normalized;
+        //    bullet.Shoot(mouseDir.normalized);
+        //}
+
+        if (Input.GetMouseButton(0))
+        {
+            mouseDir = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
+            mouseDir -= transform.position;
+
+            var bullet = ObjectPool.GetBullet(BulletCategory.testBullet);
             bullet.transform.position = transform.position + mouseDir.normalized;
             bullet.Shoot(mouseDir.normalized);
-
-
         }
+
+        if (Input.GetMouseButton(1))
+        {
+            mouseDir = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
+            mouseDir -= transform.position;
+
+            var bullet = ObjectPool.GetBullet(BulletCategory.MagicWand);
+            bullet.transform.position = transform.position + mouseDir.normalized;
+            bullet.Shoot(mouseDir.normalized);
+        }
+
+
     }
 }

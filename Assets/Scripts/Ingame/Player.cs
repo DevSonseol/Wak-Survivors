@@ -57,8 +57,8 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (HP <= 0)
-            return;
+        //if (HP <= 0)
+        //    return;
 
 
 
