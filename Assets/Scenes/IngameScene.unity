@@ -6361,7 +6361,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &444248528
 Transform:
   m_ObjectHideFlags: 0
@@ -8356,7 +8356,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1401809683
 Transform:
   m_ObjectHideFlags: 0
@@ -8566,10 +8566,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3e437df174c94a47a97f1af26f304fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poolPrefabs:
-  - {fileID: 0}
-  - {fileID: 0}
-  poolingCount: 0
+  player: {fileID: 0}
+  bulletPrefabs:
+  - {fileID: 5170270886739541650, guid: ba25f0090e97ec64fa1438dd7b6784cb, type: 3}
+  - {fileID: 5677775009722875280, guid: d9bac275c40aa7141b5a32fc38acf195, type: 3}
 --- !u!4 &1483226923
 Transform:
   m_ObjectHideFlags: 0

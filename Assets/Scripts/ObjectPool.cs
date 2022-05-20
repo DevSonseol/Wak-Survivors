@@ -2,49 +2,90 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum BulletCategory
+{
+    MagicWand
+}
 
 public class ObjectPool :  MonoBehaviour
 {
-    public GameObject[] poolPrefabs;
-    public int poolingCount;
-    private Dictionary<object, List<GameObject>> pooledObjects = new Dictionary<object, List<GameObject>>();
-    public void CreateMultiplePoolObjects() 
-    { 
-        for (int i = 0; i < poolPrefabs.Length; i++) 
-        { 
-            for (int j = 0; j < poolingCount; j++) 
-            { 
-                if (!pooledObjects.ContainsKey(poolPrefabs[i].name)) 
-                { 
-                    List<GameObject> newList = new List<GameObject>();
-                    pooledObjects.Add(poolPrefabs[i].name, newList); 
-                } 
-                GameObject newDoll = Instantiate(poolPrefabs[i], transform); 
-                newDoll.SetActive(false); 
-                pooledObjects[poolPrefabs[i].name].Add(newDoll); 
-            } 
-        } 
-    }
-    public GameObject GetPooledObject(string _name) 
-    { 
-        if (pooledObjects.ContainsKey(_name)) 
-        { 
-            for (int i = 0; i < pooledObjects[_name].Count; i++) 
-            { 
-                if (!pooledObjects[_name][i].activeSelf) 
-                { 
-                    return pooledObjects[_name][i]; 
-                } 
-            } 
-            int beforeCreateCount = pooledObjects[_name].Count;
-            CreateMultiplePoolObjects();
-            return pooledObjects[_name][beforeCreateCount]; 
-        } 
-        else 
-        { 
-            return null; 
-        } 
+    public static ObjectPool Instance;
+    [SerializeField]
+    private GameObject player;
+    [SerializeField]
+    private GameObject[] bulletPrefabs;
+
+    private List<Queue<Bullet>> poolingBulletQueueList = new List<Queue<Bullet>>();
+    private Queue<Bullet> poolingBulletQueue = new Queue<Bullet>();
+
+
+    private void Awake()
+    {
+        Instance = this;
+        Initialize(10);
     }
 
-   
+    void Start()
+    {
+        player = GameObject.Find("Player");
+    }
+
+
+    void Update()
+    {
+
+    }
+
+    private void Initialize(int Count)
+    {
+        for(int i =0; i < bulletPrefabs.Length ;i++)
+        {
+            poolingBulletQueueList.Add(new Queue<Bullet>());
+
+            for (int j = 0; j < Count; j++)
+            {
+                poolingBulletQueue.Enqueue(CreateBullet((BulletCategory)i));
+            }
+        }
+    }
+
+    private Bullet CreateBullet(BulletCategory bullets)
+    {
+        var newBullet = Instantiate(bulletPrefabs[(int)bullets], transform).GetComponent<Bullet>();
+        newBullet.gameObject.SetActive(false);
+        return newBullet;
+
+    }
+
+    public static Bullet GetBullet(BulletCategory _BC)
+    {
+        Queue<Bullet> bulletpool = Instance.poolingBulletQueueList[(int)_BC];
+
+        if (bulletpool.Count > 0)
+        {
+            Bullet bullet = bulletpool.Dequeue();
+            bullet.transform.SetParent(ObjectPool.Instance.transform);
+            bullet.gameObject.SetActive(true);
+            return bullet;
+        }
+        else
+        {
+            Bullet bullet = Instance.CreateBullet(_BC);
+            bullet.transform.SetParent(ObjectPool.Instance.transform);
+            bullet.gameObject.SetActive(true);
+            return bullet;
+        }
+
+    }
+
+    public static void ReturnBullet(Bullet bullet , BulletCategory _BC)
+    {
+        Queue<Bullet> bulletpool = Instance.poolingBulletQueueList[(int)_BC];
+
+        bullet.gameObject.SetActive(false);
+        bullet.transform.SetParent(Instance.transform);
+        bulletpool.Enqueue(bullet);
+    }
+
+
 }
