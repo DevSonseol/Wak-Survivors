@@ -4,16 +4,6 @@ using UnityEngine;
 
 public class MagicWand : Weapon
 {
-    private const int maxBulletCount = 8;
-    private const float castdelayTinme = 0.05f;
-
-    [SerializeField]
-    private GameObject magicWandBulletPrefab;
-
-
-    [SerializeField]
-    private int bulletCount = 1;
-
 
     void Awake()
     {
@@ -21,12 +11,18 @@ public class MagicWand : Weapon
         {
             player = GameObject.Find("Player");
         }
+
+        CanCast = true;
     }
+
+
+
+
 
     void Start()
     {
-        //첫번쨰꺼 작동
-        CanCast = true;
+
+
     }
 
     void Update()
@@ -37,9 +33,7 @@ public class MagicWand : Weapon
 
         if (CanCast)
         {
-        //가까운 적 탐색
-
-            //공격
+            CanCast = false;
             StartCoroutine(Active());
         }
 
@@ -47,16 +41,15 @@ public class MagicWand : Weapon
 
     private IEnumerator Active()
     {
-        CanCast = false;
 
-        for (int i = 0; i < maxBulletCount; i++)
+        for (int i = 0; i < bulletCount; i++)
         {
+            yield return new WaitForSeconds(castdelayTime);
             Shoot();
-            Debug.Log("shoot");
         }
 
-        yield return new WaitForSeconds(coolTime - (castdelayTinme * maxBulletCount));
-        Debug.Log("shootcool");
+
+        yield return new WaitForSeconds(coolTime - (castdelayTime * bulletCount));
 
         CanCast = true;
     }
@@ -64,9 +57,14 @@ public class MagicWand : Weapon
 
     private void Shoot()
     {
+        if (MonsterPool.Instance.nerestTarget == null)
+            return;
 
+        Vector3 dir = MonsterPool.Instance.nerestTarget.transform.position - player.transform.position;
 
-      
+        var bullet = ObjectPool.GetBullet(BulletCategory.MagicWand);
+        bullet.transform.position = transform.position + dir.normalized;
+        bullet.Shoot(dir.normalized);
     }
 
     public override void LevelUp()

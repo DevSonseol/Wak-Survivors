@@ -21,16 +21,20 @@ public class MagicWandBullet : Bullet
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         Debug.Log(angle);
         transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
-        Invoke("DestroyBullet", 5f);
+        Invoke("DestroyBullet", duration);
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Monster")
         {
+            CancelInvoke("DestroyBullet");
+
             Invoke("DestroyBullet", 0f);
             //충돌 후 데미지 주기
             Debug.Log("MagicWandBullet OnTriggerEnter2D 몬스터 충돌");
+            collision.GetComponent<Monster>().Die();
         }
     }
 

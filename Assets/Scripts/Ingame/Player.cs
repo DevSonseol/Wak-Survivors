@@ -38,6 +38,9 @@ public class Player : MonoBehaviour
     private Rigidbody2D rigid2D;
     private Animator animator;
 
+    [HideInInspector]
+    public Vector3 playerDir;
+
     void Awake()
     {
         circleCollider2D = GetComponent<CircleCollider2D>();
@@ -70,6 +73,14 @@ public class Player : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
+        //playerπÊ«‚∫§≈Õ
+        if (x != 0)
+            playerDir.x = x;
+
+        if (y != 0)
+            playerDir.y = y;
+       
+
         bool isMove = false;
         
         if(x !=0 || y !=0)
@@ -99,11 +110,6 @@ public class Player : MonoBehaviour
     {
         HP -= damage;
     }
-
-
-
-
-
 
 
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Weapon : MonoBehaviour
+public abstract class Weapon : MonoBehaviour
 {
     [SerializeField]
     protected GameObject player;
@@ -35,6 +35,17 @@ public class Weapon : MonoBehaviour
     protected float speed;
 
     [SerializeField]
+    protected int maxBulletCount = 8;
+    [SerializeField]
+    protected float castdelayTime = 0.05f;
+
+    [SerializeField]
+    protected GameObject magicWandBulletPrefab;
+
+    [SerializeField]
+    protected int bulletCount = 1;
+
+    [SerializeField]
     protected bool CanCast = true;
 
     void Start()
@@ -49,5 +60,6 @@ public class Weapon : MonoBehaviour
     }
 
     public virtual void LevelUp() { }
+
 
 }

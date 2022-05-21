@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public abstract class Bullet : MonoBehaviour
 {
     [SerializeField]
     protected Vector3 direction;
@@ -11,15 +11,18 @@ public class Bullet : MonoBehaviour
     protected float speed = 1;
 
     [SerializeField]
-    protected BulletCategory category = BulletCategory.testBullet;
+    protected BulletCategory category;
 
     [SerializeField]
     protected float damage;
 
+    [SerializeField]
+    protected float duration;
+
     public virtual void Shoot(Vector3 dir)
     {
         direction = dir;
-        Invoke("DestroyBullet",2f);
+        Invoke("DestroyBullet", duration);
     }
 
 

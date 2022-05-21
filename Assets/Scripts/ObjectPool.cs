@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum BulletCategory
 {
-    testBullet,MagicWand
+    MagicWand , Knife
 }
 
 public class ObjectPool :  MonoBehaviour
@@ -16,7 +16,7 @@ public class ObjectPool :  MonoBehaviour
     private GameObject[] bulletPrefabs;
 
     private List<Queue<Bullet>> poolingBulletQueueList = new List<Queue<Bullet>>();
-    private Queue<Bullet> poolingBulletQueue = new Queue<Bullet>();
+    //private Queue<Bullet> poolingBulletQueue = new Queue<Bullet>();
 
 
     private void Awake()
@@ -44,7 +44,7 @@ public class ObjectPool :  MonoBehaviour
 
             for (int j = 0; j < Count; j++)
             {
-                poolingBulletQueue.Enqueue(CreateBullet((BulletCategory)i));
+                poolingBulletQueueList[i].Enqueue(CreateBullet((BulletCategory)i));
             }
         }
     }
@@ -63,14 +63,13 @@ public class ObjectPool :  MonoBehaviour
 
         if (bulletpool.Count > 0)
         {
-            Bullet bullet = bulletpool.Dequeue();
-            bullet.transform.SetParent(ObjectPool.Instance.transform);
+            var bullet = bulletpool.Dequeue();
             bullet.gameObject.SetActive(true);
             return bullet;
         }
         else
         {
-            Bullet bullet = Instance.CreateBullet(_BC);
+            var bullet = Instance.CreateBullet(_BC);
             bulletpool.Enqueue(bullet);
             bullet.transform.SetParent(ObjectPool.Instance.transform);
             bullet.gameObject.SetActive(true);
@@ -84,8 +83,9 @@ public class ObjectPool :  MonoBehaviour
         Queue<Bullet> bulletpool = Instance.poolingBulletQueueList[(int)_BC];
 
         bullet.gameObject.SetActive(false);
-        bullet.transform.SetParent(Instance.transform);
         bulletpool.Enqueue(bullet);
+
+
     }
 
 

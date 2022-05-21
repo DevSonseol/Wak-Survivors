@@ -136,4 +136,23 @@ public class Monster : MonoBehaviour
     {
 
     }
+
+
+    public void TestChangeColor(Color color)
+    {
+        SpriteRenderer renderer = this.gameObject.GetComponent<SpriteRenderer>();
+
+        renderer.color = color;
+
+
+
+    }
+
+    public void Die()
+    {
+        MonsterPool.ReturnMonster(this);
+    }
+
+
+
 }

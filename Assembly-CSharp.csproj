@@ -66,10 +66,11 @@
     <Compile Include="Assets\Scripts\Roullte\RoulettePieceData.cs" />
     <Compile Include="Assets\Scripts\Lobby\CoinUI.cs" />
     <Compile Include="Assets\Scripts\Struct.cs" />
-    <Compile Include="Assets\Scripts\Ingame\WeaponSystem.cs" />
+    <Compile Include="Assets\Scripts\Ingame\Weapons\WeaponSystem.cs" />
     <Compile Include="Assets\Scripts\SimpleCharacterController.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\MagicWand.cs" />
     <Compile Include="Assets\Scripts\Lobby\CharacterButton.cs" />
+    <Compile Include="Assets\Scripts\ObjectPool.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\Ingame\FollowingCamera.cs" />
     <Compile Include="Assets\Scripts\Lobby\SelectButton.cs" />
@@ -95,7 +96,9 @@
     <Compile Include="Assets\Scripts\Lobby\StatText.cs" />
     <Compile Include="Assets\Scripts\Shooter.cs" />
     <Compile Include="Assets\Scripts\Ingame\WeaponUI.cs" />
-    <Compile Include="Assets\Scripts\ObjectPool.cs" />
+    <Compile Include="Assets\Scripts\Ingame\Weapons\KnifeBullet.cs" />
+    <Compile Include="Assets\Scripts\Ingame\Weapons\Knife.cs" />
+    <Compile Include="Assets\Scripts\MonsterPool.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

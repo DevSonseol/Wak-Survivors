@@ -34,7 +34,7 @@ public class Shooter : MonoBehaviour
             mouseDir = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
             mouseDir -= transform.position;
 
-            var bullet = ObjectPool.GetBullet(BulletCategory.testBullet);
+            var bullet = ObjectPool.GetBullet(BulletCategory.Knife);
             bullet.transform.position = transform.position + mouseDir.normalized;
             bullet.Shoot(mouseDir.normalized);
         }

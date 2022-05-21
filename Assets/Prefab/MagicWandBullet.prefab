@@ -48,8 +48,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0, z: 0}
   speed: 2
-  category: 1
+  category: 0
   damage: 10
+  duration: 2
 --- !u!58 &6402181365572535650
 CircleCollider2D:
   m_ObjectHideFlags: 0
