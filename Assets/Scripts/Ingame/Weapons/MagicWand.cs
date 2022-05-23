@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MagicWand : Weapon
 {
-
     void Awake()
     {
         if (player == null)
@@ -14,11 +13,6 @@ public class MagicWand : Weapon
 
         CanCast = true;
     }
-
-
-
-
-
     void Start()
     {
 
@@ -64,6 +58,7 @@ public class MagicWand : Weapon
 
         var bullet = ObjectPool.GetBullet(BulletCategory.MagicWand);
         bullet.transform.position = transform.position + dir.normalized;
+        bullet.SetBulletStat(damage, duratation, speed);
         bullet.Shoot(dir.normalized);
     }
 

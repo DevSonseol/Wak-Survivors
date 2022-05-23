@@ -27,8 +27,7 @@ public class Knife : Weapon
 
         if (CanCast)
         {
-            //가까운 적 탐색
-
+            CanCast = false;
             //공격
             StartCoroutine(Active());
         }
@@ -37,26 +36,30 @@ public class Knife : Weapon
 
     private IEnumerator Active()
     {
-        CanCast = false;
 
-        for (int i = 0; i < maxBulletCount; i++)
+        for (int i = 0; i < bulletCount; i++)
         {
+            yield return new WaitForSeconds(castdelayTime);
             Shoot();
-            Debug.Log("shoot");
+            Debug.Log("나이프");
         }
 
-        yield return new WaitForSeconds(coolTime - (castdelayTime * maxBulletCount));
-        Debug.Log("shootcool");
+
+        yield return new WaitForSeconds(coolTime - (castdelayTime * bulletCount));
 
         CanCast = true;
+
     }
 
 
     private void Shoot()
     {
+        Vector3 dir = player.GetComponent<Player>().playerDir;
 
-
-
+        var bullet = ObjectPool.GetBullet(BulletCategory.Knife);
+        bullet.transform.position = transform.position + dir.normalized;
+        bullet.SetBulletStat(damage, duratation, speed);
+        bullet.Shoot(dir.normalized);
     }
 
     public override void LevelUp()

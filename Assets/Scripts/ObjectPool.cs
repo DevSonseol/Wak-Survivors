@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum BulletCategory
 {
-    MagicWand , Knife
+    MagicWand , Knife , Axe
 }
 
 public class ObjectPool :  MonoBehaviour
@@ -16,8 +16,6 @@ public class ObjectPool :  MonoBehaviour
     private GameObject[] bulletPrefabs;
 
     private List<Queue<Bullet>> poolingBulletQueueList = new List<Queue<Bullet>>();
-    //private Queue<Bullet> poolingBulletQueue = new Queue<Bullet>();
-
 
     private void Awake()
     {

@@ -40,7 +40,7 @@ public abstract class Weapon : MonoBehaviour
     protected float castdelayTime = 0.05f;
 
     [SerializeField]
-    protected GameObject magicWandBulletPrefab;
+    protected GameObject BulletPrefab;
 
     [SerializeField]
     protected int bulletCount = 1;

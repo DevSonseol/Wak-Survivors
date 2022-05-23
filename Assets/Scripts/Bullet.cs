@@ -36,4 +36,17 @@ public abstract class Bullet : MonoBehaviour
     {
         transform.Translate(direction * Time.deltaTime * speed);
     }
+
+    public void SetBulletStat(float _damage, float _duration , float _speed)
+    {
+        speed = _speed;
+        damage = _damage;
+        duration = _duration;
+    }
+
+    public void SetDamage(float _damage)
+    {
+        damage = _damage;
+    }
+
 }

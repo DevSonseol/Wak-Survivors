@@ -50,6 +50,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        playerDir = new Vector3(1, 0, 0);
         moveSpeed = PlayerData.Instacne.Stat.MoveSpeed;
         HP = PlayerData.Instacne.Stat.MaxHealth;
         maxHP = PlayerData.Instacne.Stat.MaxHealth;
@@ -74,12 +75,12 @@ public class Player : MonoBehaviour
         float y = Input.GetAxisRaw("Vertical");
 
         //playerπÊ«‚∫§≈Õ
-        if (x != 0)
+        if(x != 0 || y != 0)
+        {
             playerDir.x = x;
-
-        if (y != 0)
             playerDir.y = y;
-       
+        }
+
 
         bool isMove = false;
         

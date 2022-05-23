@@ -31,7 +31,7 @@ public class MagicWandBullet : Bullet
         {
             CancelInvoke("DestroyBullet");
 
-            Invoke("DestroyBullet", 0f);
+            DestroyBullet();
             //충돌 후 데미지 주기
             Debug.Log("MagicWandBullet OnTriggerEnter2D 몬스터 충돌");
             collision.GetComponent<Monster>().Die();

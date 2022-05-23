@@ -6362,7 +6362,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &444248528
 Transform:
   m_ObjectHideFlags: 0
@@ -6397,10 +6397,10 @@ MonoBehaviour:
   damage: 10
   duratation: 10
   coolTime: 2
-  speed: 10
+  speed: 2
   maxBulletCount: 8
   castdelayTime: 0.2
-  magicWandBulletPrefab: {fileID: 5677775009722875280, guid: d9bac275c40aa7141b5a32fc38acf195, type: 3}
+  BulletPrefab: {fileID: 5677775009722875280, guid: d9bac275c40aa7141b5a32fc38acf195, type: 3}
   bulletCount: 3
   CanCast: 1
 --- !u!1 &463885380
@@ -7542,6 +7542,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1006016752}
   m_CullTransparentMesh: 1
+--- !u!1 &1073643179
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1073643181}
+  - component: {fileID: 1073643180}
+  m_Layer: 0
+  m_Name: WeaponAxe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1073643180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073643179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82fa68670b67c334d946a3da6f6d9c53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  sprite: {fileID: 0}
+  weapon: 3
+  MaxLevel: 8
+  Level: 1
+  damage: 10
+  duratation: 5
+  coolTime: 2
+  speed: 20
+  maxBulletCount: 8
+  castdelayTime: 0.2
+  BulletPrefab: {fileID: 3625540913803065454, guid: ff90851c3aa98f545bd00e45272cebfe, type: 3}
+  bulletCount: 3
+  CanCast: 1
+--- !u!4 &1073643181
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073643179}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.3879367, y: -3.1218774, z: -20.505857}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1078348522
 GameObject:
   m_ObjectHideFlags: 0
@@ -7850,7 +7907,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1184629397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7869,12 +7926,12 @@ MonoBehaviour:
   MaxLevel: 8
   Level: 1
   damage: 10
-  duratation: 0
+  duratation: 3
   coolTime: 2
-  speed: 0
+  speed: 10
   maxBulletCount: 8
   castdelayTime: 0.05
-  magicWandBulletPrefab: {fileID: 0}
+  BulletPrefab: {fileID: 1245716684843948295, guid: 1c2b190ff0fb7f84b92090019d95564d, type: 3}
   bulletCount: 1
   CanCast: 1
 --- !u!4 &1184629398
@@ -8658,6 +8715,7 @@ MonoBehaviour:
   bulletPrefabs:
   - {fileID: 5677775009722875280, guid: d9bac275c40aa7141b5a32fc38acf195, type: 3}
   - {fileID: 1245716684843948295, guid: 1c2b190ff0fb7f84b92090019d95564d, type: 3}
+  - {fileID: 3625540913803065454, guid: ff90851c3aa98f545bd00e45272cebfe, type: 3}
 --- !u!4 &1483226923
 Transform:
   m_ObjectHideFlags: 0

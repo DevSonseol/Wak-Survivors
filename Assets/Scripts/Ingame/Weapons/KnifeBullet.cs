@@ -28,7 +28,8 @@ public class KnifeBullet : Bullet
     {
         if (collision.gameObject.tag == "Monster")
         {
-            Invoke("DestroyBullet", 0f);
+            CancelInvoke("DestroyBullet");
+            DestroyBullet();
             //충돌 후 데미지 주기
             Debug.Log("KnifeBullet OnTriggerEnter2D 몬스터 충돌");
         }
