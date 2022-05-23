@@ -32,6 +32,7 @@ public class KnifeBullet : Bullet
             DestroyBullet();
             //충돌 후 데미지 주기
             Debug.Log("KnifeBullet OnTriggerEnter2D 몬스터 충돌");
+            collision.GetComponent<Monster>().Die();
         }
     }
 }

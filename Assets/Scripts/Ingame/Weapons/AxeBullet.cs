@@ -53,11 +53,16 @@ public class AxeBullet : Bullet
             DestroyBullet();
             //충돌 후 데미지 주기
             Debug.Log("AxeBullet OnTriggerEnter2D 몬스터 충돌");
+            collision.GetComponent<Monster>().Die();
         }
     }
 
-    public void ResetForce()
+    private void ResetForce()
     {
         force = fixedforce;
+        force -= Random.RandomRange(0f, 5f);
+
+
+        
     }
 }
