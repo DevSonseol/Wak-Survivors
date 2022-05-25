@@ -78,9 +78,9 @@ public class Whip : Weapon
 
         while (color.a < 1)
         {
-            color.a += Time.deltaTime / duratation;
+            color.a += Time.deltaTime / duration;
             sr.material.color = color;
-            yield return new WaitForSeconds(Time.deltaTime / duratation);
+            yield return new WaitForSeconds(Time.deltaTime / duration);
         }
 
         color.a = 0;

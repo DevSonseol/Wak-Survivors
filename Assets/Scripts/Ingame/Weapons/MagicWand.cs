@@ -58,7 +58,7 @@ public class MagicWand : Weapon
 
         var bullet = ObjectPool.GetBullet(BulletCategory.MagicWand);
         bullet.transform.position = transform.position + dir.normalized;
-        bullet.SetBulletStat(damage, duratation, speed);
+        bullet.SetBulletStat(damage, duration, speed);
         bullet.Shoot(dir.normalized);
     }
 

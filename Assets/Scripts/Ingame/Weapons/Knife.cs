@@ -57,8 +57,12 @@ public class Knife : Weapon
         Vector3 dir = player.GetComponent<Player>().playerDir;
 
         var bullet = ObjectPool.GetBullet(BulletCategory.Knife);
-        bullet.transform.position = transform.position + dir.normalized;
-        bullet.SetBulletStat(damage, duratation, speed);
+        //약간 거리 벌리기 
+        float rad1 = Random.Range(-0.5f, 0.5f);
+        float rad2 = Random.Range(- 0.5f, 0.5f);
+
+        bullet.transform.position = transform.position + new Vector3(rad1, rad2, 0);
+        bullet.SetBulletStat(damage, duration, speed);
         bullet.Shoot(dir.normalized);
     }
 

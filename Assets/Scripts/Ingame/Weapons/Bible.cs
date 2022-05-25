@@ -65,7 +65,7 @@ public class Bible : Weapon
         var bullet = ObjectPool.GetBullet(BulletCategory.Bible) as BibleBullet;
         bullet.transform.position = transform.position;
 
-        bullet.SetBulletStat(damage, duratation, speed);
+        bullet.SetBulletStat(damage, duration, speed);
         bullet.SetDistFromPlayerAndDegree(distFromPlayer, degree);
 
         bullet.Shoot(dir.normalized);

@@ -26,7 +26,7 @@ public abstract class Weapon : MonoBehaviour
     protected float damage;
 
     [SerializeField]
-    protected float duratation;
+    protected float duration;
 
     [SerializeField]
     protected float coolTime;

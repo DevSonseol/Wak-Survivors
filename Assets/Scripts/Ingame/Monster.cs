@@ -8,9 +8,6 @@ public class Monster : MonoBehaviour
     private GameObject target;
 
     [SerializeField]
-    private float maxHP;
-
-    [SerializeField]
     private float HP;
 
     [SerializeField]
@@ -49,6 +46,7 @@ public class Monster : MonoBehaviour
         {
             //사망처리
             Debug.Log("Monster 사망처리");
+            this.Die();
         }
 
 
@@ -86,7 +84,7 @@ public class Monster : MonoBehaviour
         }
         else
         {
-            Debug.Log("HitPlayer");
+            //Debug.Log("HitPlayer");
 
             CanDamage = false;
             //플레이어 데미지
@@ -109,7 +107,7 @@ public class Monster : MonoBehaviour
         }
         else
         {
-            Debug.Log("HittingPlayer");
+            //Debug.Log("HittingPlayer");
 
             CanDamage = false;
             //플레이어 데미지
@@ -126,18 +124,6 @@ public class Monster : MonoBehaviour
         CanDamage = true;
     }
 
-
-    public void TakeDamage(float _damage)
-    {
-
-    }
-
-    public void SetStat()
-    {
-
-    }
-
-
     public void TestChangeColor(Color color)
     {
         SpriteRenderer renderer = this.gameObject.GetComponent<SpriteRenderer>();
@@ -153,6 +139,16 @@ public class Monster : MonoBehaviour
         MonsterPool.ReturnMonster(this);
     }
 
+    public void TakeDamage(float Damage)
+    {
+        HP -= Damage;
+    }
 
+    public void SetMonster(float HP,float Damage,float Speed)
+    {
+        this.HP = HP;
+        this.damage = Damage;
+        this.speed = Speed;
+    }
 
 }

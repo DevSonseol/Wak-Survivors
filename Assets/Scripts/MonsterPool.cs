@@ -17,6 +17,8 @@ public class MonsterPool : MonoBehaviour
 
     public Monster nerestTarget;
 
+    public int MonsterCount = 1;
+
     private void Awake()
     {
         Instance = this;
@@ -41,7 +43,10 @@ public class MonsterPool : MonoBehaviour
 
     private void Spawn()
     {
-        MonsterPool.GetMonster();
+        var monster = MonsterPool.GetMonster();
+        monster.SetMonster(MonsterCount, 10,10);
+
+        MonsterCount++;
     }
 
     private void Initialize(int Count)

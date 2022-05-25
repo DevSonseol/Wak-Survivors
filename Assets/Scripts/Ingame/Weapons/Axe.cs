@@ -58,7 +58,7 @@ public class Axe : Weapon
         dir.z = 0;
 
         var bullet = ObjectPool.GetBullet(BulletCategory.Axe);
-        bullet.transform.position = transform.position + dir.normalized;
+        bullet.transform.position = transform.position;
         bullet.SetDamage(damage);
         bullet.Shoot(dir.normalized);
     }
