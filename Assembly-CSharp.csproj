@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\GameSystem.cs" />
     <Compile Include="Assets\Scripts\Ingame\PlayerData.cs" />
     <Compile Include="Assets\Scripts\Ingame\Timer.cs" />
+    <Compile Include="Assets\Shared\Scripts\SimpleCharacterMotor.cs" />
     <Compile Include="Assets\Scripts\InputKeyTest.cs" />
     <Compile Include="Assets\Scripts\TileMapManager.cs" />
     <Compile Include="Assets\TwitchIRC-Unity-master\TwitchIRC.cs" />
@@ -72,7 +73,9 @@
     <Compile Include="Assets\Scripts\Struct.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\WeaponSystem.cs" />
     <Compile Include="Assets\Scripts\SimpleCharacterController.cs" />
+    <Compile Include="Assets\Shared\Scripts\ProximityActivate.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\KnifeBullet.cs" />
+    <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\MagicWand.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\BibleBullet.cs" />
     <Compile Include="Assets\Scripts\Lobby\CharacterButton.cs" />
@@ -85,21 +88,25 @@
     <Compile Include="Assets\Scripts\TileMap.cs" />
     <Compile Include="Assets\Scripts\Lobby\BuyButton.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\CrossBullet.cs" />
+    <Compile Include="Assets\Shared\Scripts\AdjustTimeScale.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\SantaWater.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\Bible.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\FireWand.cs" />
     <Compile Include="Assets\Scripts\Lobby\PowerUpButton.cs" />
+    <Compile Include="Assets\Shared\Ramps\Runtime\RampAsset.cs" />
     <Compile Include="Assets\Scripts\Roullte\Roulette.cs" />
     <Compile Include="Assets\Scripts\Lobby\RefundButton.cs" />
     <Compile Include="Assets\Scripts\BulletObjectPool.cs" />
     <Compile Include="Assets\TwitchIRC-Unity-master\TwichConnect.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\Knife.cs" />
+    <Compile Include="Assets\Shared\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\Ingame\IngameUIManager.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\MagicWandBullet.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\Whip.cs" />
     <Compile Include="Assets\Scripts\Roullte\ButtonSpin.cs" />
     <Compile Include="Assets\Scripts\Roullte\RoulettePiece.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\AxeBullet.cs" />
+    <Compile Include="Assets\EffectExamples\Misc Effects\Scripts\SpawnEffect.cs" />
     <Compile Include="Assets\Scripts\GameData.cs" />
     <Compile Include="Assets\TwitchIRC-Unity-master\TwitchChatExample.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\Cross.cs" />
@@ -112,13 +119,7 @@
     <Compile Include="Assets\Scripts\Ingame\WeaponUI.cs" />
     <Compile Include="Assets\Scripts\MonsterPool.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\FireWandBullet.cs" />
-    <Compile Include="Assets\Shared\Ramps\Runtime\RampAsset.cs" />
-    <Compile Include="Assets\Shared\Scripts\SimpleCharacterMotor.cs" />
-    <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
-    <Compile Include="Assets\Shared\Scripts\ProximityActivate.cs" />
-    <Compile Include="Assets\EffectExamples\Misc Effects\Scripts\SpawnEffect.cs" />
-    <Compile Include="Assets\Shared\Scripts\SimpleCameraController.cs" />
-    <Compile Include="Assets\Shared\Scripts\AdjustTimeScale.cs" />
+    <Compile Include="Assets\Scripts\Ingame\Weapons\SantaWaterBullet.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -764,6 +765,9 @@
     <Reference Include="Unity.InternalAPIEditorBridge.001">
       <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Postprocessing.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
@@ -773,6 +777,9 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ProGrids.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ProGrids.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
@@ -781,6 +788,9 @@
     </Reference>
     <Reference Include="Unity.2D.IK.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Triangle.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
@@ -803,23 +813,14 @@
     <Reference Include="Unity.2D.SpriteShape.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ProGrids">
+      <HintPath>Library\ScriptAssemblies\Unity.ProGrids.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.2D.Common.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ProGrids.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.ProGrids.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ProGrids">
-      <HintPath>Library\ScriptAssemblies\Unity.ProGrids.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
