@@ -45,7 +45,7 @@ public class MonsterPool : MonoBehaviour
     {
         var monster = MonsterPool.GetMonster();
         monster.SetMonster(MonsterCount, 10,10);
-
+        monster.name = "Monster"+MonsterCount.ToString();
         MonsterCount++;
     }
 

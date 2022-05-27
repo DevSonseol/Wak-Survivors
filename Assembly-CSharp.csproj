@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\Ingame\PlayerData.cs" />
     <Compile Include="Assets\Scripts\Ingame\Timer.cs" />
     <Compile Include="Assets\Shared\Scripts\SimpleCharacterMotor.cs" />
+    <Compile Include="Assets\Scripts\Ingame\Weapons\SantaWaterBullet.cs" />
     <Compile Include="Assets\Scripts\InputKeyTest.cs" />
     <Compile Include="Assets\Scripts\TileMapManager.cs" />
     <Compile Include="Assets\TwitchIRC-Unity-master\TwitchIRC.cs" />
@@ -119,7 +120,8 @@
     <Compile Include="Assets\Scripts\Ingame\WeaponUI.cs" />
     <Compile Include="Assets\Scripts\MonsterPool.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\FireWandBullet.cs" />
-    <Compile Include="Assets\Scripts\Ingame\Weapons\SantaWaterBullet.cs" />
+    <Compile Include="Assets\Scripts\Ingame\Weapons\RuneTracer.cs" />
+    <Compile Include="Assets\Scripts\Ingame\Weapons\RuneTracerBullet.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

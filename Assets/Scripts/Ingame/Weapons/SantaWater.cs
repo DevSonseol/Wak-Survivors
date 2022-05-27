@@ -63,7 +63,7 @@ public class SantaWater : Weapon
         bullet.transform.position = transform.position;
         bullet.SetBulletStat(damage, duration, speed);
         bullet.SetDestination(dest);
-        bullet.Shoot((transform.position - dest).normalized);
+        bullet.Shoot((dest - transform.position).normalized);
     }
 
     public override void LevelUp()
