@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Movement2D.cs" />
     <Compile Include="Assets\Scripts\Ingame\Player.cs" />
+    <Compile Include="Assets\Scripts\Ingame\Weapons\RuneTracerBullet.cs" />
     <Compile Include="Assets\Scripts\GameSystem.cs" />
     <Compile Include="Assets\Scripts\Ingame\PlayerData.cs" />
     <Compile Include="Assets\Scripts\Ingame\Timer.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\MagicWand.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\BibleBullet.cs" />
+    <Compile Include="Assets\Scripts\Ingame\Weapons\RuneTracer.cs" />
     <Compile Include="Assets\Scripts\Lobby\CharacterButton.cs" />
     <Compile Include="Assets\Scripts\ObjectPool.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
@@ -120,8 +122,8 @@
     <Compile Include="Assets\Scripts\Ingame\WeaponUI.cs" />
     <Compile Include="Assets\Scripts\MonsterPool.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\FireWandBullet.cs" />
-    <Compile Include="Assets\Scripts\Ingame\Weapons\RuneTracer.cs" />
-    <Compile Include="Assets\Scripts\Ingame\Weapons\RuneTracerBullet.cs" />
+    <Compile Include="Assets\Scripts\Ingame\Weapons\Lightening.cs" />
+    <Compile Include="Assets\Scripts\Ingame\Weapons\LighteningBullet.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
