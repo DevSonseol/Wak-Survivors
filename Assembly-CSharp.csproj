@@ -65,6 +65,7 @@
     <Compile Include="Assets\Shared\Scripts\SimpleCharacterMotor.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\SantaWaterBullet.cs" />
     <Compile Include="Assets\Scripts\InputKeyTest.cs" />
+    <Compile Include="Assets\Scripts\Ingame\Weapons\LighteningBullet.cs" />
     <Compile Include="Assets\Scripts\TileMapManager.cs" />
     <Compile Include="Assets\TwitchIRC-Unity-master\TwitchIRC.cs" />
     <Compile Include="Assets\Scripts\Lobby\LvCounter.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Assets\Scripts\Ingame\Weapons\Axe.cs" />
     <Compile Include="Assets\Scripts\Struct.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\WeaponSystem.cs" />
+    <Compile Include="Assets\Scripts\Ingame\Weapons\Lightening.cs" />
     <Compile Include="Assets\Scripts\SimpleCharacterController.cs" />
     <Compile Include="Assets\Shared\Scripts\ProximityActivate.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\KnifeBullet.cs" />
@@ -122,8 +124,8 @@
     <Compile Include="Assets\Scripts\Ingame\WeaponUI.cs" />
     <Compile Include="Assets\Scripts\MonsterPool.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\FireWandBullet.cs" />
-    <Compile Include="Assets\Scripts\Ingame\Weapons\Lightening.cs" />
-    <Compile Include="Assets\Scripts\Ingame\Weapons\LighteningBullet.cs" />
+    <Compile Include="Assets\Scripts\Ingame\Weapons\Pentagram.cs" />
+    <Compile Include="Assets\Scripts\Ingame\Weapons\Peachone.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
