@@ -1,9 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Pentagram : Weapon
 {
+
+    private SpriteRenderer sr;
+
+    [SerializeField]
+    private Text text;
+
     void Awake()
     {
         if (player == null)
@@ -15,7 +22,7 @@ public class Pentagram : Weapon
     }
     void Start()
     {
-
+        sr = gameObject.GetComponent<SpriteRenderer>();
 
     }
 
@@ -35,24 +42,35 @@ public class Pentagram : Weapon
 
     private IEnumerator Active()
     {
+        //모든 몬스터에게 데미지
+        GameObject monsterpool = MonsterPool.Instance.gameObject;
+        Monster[] monsters = monsterpool.GetComponentsInChildren<Monster>();
 
-        for (int i = 0; i < bulletCount; i++)
+        foreach(Monster mon in monsters)
         {
-            yield return new WaitForSeconds(castdelayTime);
-            Shoot();
+            mon.Die();
         }
 
-
-        yield return new WaitForSeconds(coolTime - (castdelayTime * bulletCount));
-
+        yield return new WaitForSeconds(coolTime);
         CanCast = true;
     }
 
-
-    private void Shoot()
+    void FadeIn()
     {
-     
+        //잠깐 
+
+
+
     }
+
+    void FadeOut()
+    {
+        //잠깐 
+
+      
+
+    }
+
 
     public override void LevelUp()
     {

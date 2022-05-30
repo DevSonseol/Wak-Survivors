@@ -92,6 +92,7 @@
     <Compile Include="Assets\Scripts\Ingame\Monster.cs" />
     <Compile Include="Assets\Scripts\TileMap.cs" />
     <Compile Include="Assets\Scripts\Lobby\BuyButton.cs" />
+    <Compile Include="Assets\Scripts\Ingame\Weapons\Peachone.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\CrossBullet.cs" />
     <Compile Include="Assets\Shared\Scripts\AdjustTimeScale.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\SantaWater.cs" />
@@ -123,9 +124,8 @@
     <Compile Include="Assets\Scripts\Shooter.cs" />
     <Compile Include="Assets\Scripts\Ingame\WeaponUI.cs" />
     <Compile Include="Assets\Scripts\MonsterPool.cs" />
-    <Compile Include="Assets\Scripts\Ingame\Weapons\FireWandBullet.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\Pentagram.cs" />
-    <Compile Include="Assets\Scripts\Ingame\Weapons\Peachone.cs" />
+    <Compile Include="Assets\Scripts\Ingame\Weapons\FireWandBullet.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

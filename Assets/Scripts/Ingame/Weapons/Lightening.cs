@@ -51,12 +51,13 @@ public class Lightening : Weapon
 
     private void Shoot()
     {
+        //첫번쨰 죽이자
         if (MonsterPool.Instance.nerestTarget == null)
             return;
 
         Vector3 dir = MonsterPool.Instance.nerestTarget.transform.position - player.transform.position;
 
-        var bullet = ObjectPool.GetBullet(BulletCategory.MagicWand);
+        var bullet = ObjectPool.GetBullet(BulletCategory.Lightening);
         bullet.transform.position = transform.position + dir.normalized;
         bullet.SetBulletStat(damage, duration, speed);
         bullet.Shoot(dir.normalized);
