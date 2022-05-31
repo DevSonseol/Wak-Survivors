@@ -6,14 +6,18 @@ using UnityEngine.UI;
 public class LighteningBullet : Bullet
 {
 
-    [SerializeField]
-    private Sprite[] sparks;
+    public Sprite[] sparks;
 
     private SpriteRenderer sr;
 
+
+    private void Awake()
+    {
+        sr = gameObject.GetComponent<SpriteRenderer>();
+    }
     void Start()
     {
-        sr = GetComponent<SpriteRenderer>();
+        
     }
 
     protected override void Update()
@@ -21,13 +25,14 @@ public class LighteningBullet : Bullet
 
     }
 
-    public void Shoot(Vector3 dir , Monster targetMonster)
+    public void Shoot(Monster targetMonster)
     {
         //이미지 변경
-        int rand = Random.Range(0, sparks.Length);
+        int rand = Random.Range(0, 8);
         sr.sprite = sparks[rand];
 
-        direction = new Vector3(dir.x, dir.y, 0);
+        //위치 이동
+        transform.position = targetMonster.transform.position;
         Invoke("DestroyBullet", duration);
 
         //번개 소리

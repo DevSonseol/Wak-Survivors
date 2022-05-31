@@ -11,6 +11,9 @@ public class Pentagram : Weapon
     [SerializeField]
     private Text text;
 
+
+    private CircleCollider2D cc;
+
     void Awake()
     {
         if (player == null)
@@ -23,7 +26,7 @@ public class Pentagram : Weapon
     void Start()
     {
         sr = gameObject.GetComponent<SpriteRenderer>();
-
+        cc = gameObject.GetComponent<CircleCollider2D>();
     }
 
     void Update()
@@ -31,25 +34,26 @@ public class Pentagram : Weapon
         //플레이어 위치로 이동
         transform.position = player.transform.position;
 
-
         if (CanCast)
         {
+            cc.radius = 0.1f;
             CanCast = false;
             StartCoroutine(Active());
         }
-
     }
 
     private IEnumerator Active()
     {
-        //모든 몬스터에게 데미지
-        GameObject monsterpool = MonsterPool.Instance.gameObject;
-        Monster[] monsters = monsterpool.GetComponentsInChildren<Monster>();
+        ////모든 몬스터에게 데미지
+        //GameObject monsterpool = MonsterPool.Instance.gameObject;
+        //Monster[] monsters = monsterpool.GetComponentsInChildren<Monster>();
 
-        foreach(Monster mon in monsters)
-        {
-            mon.Die();
-        }
+        //foreach(Monster mon in monsters)
+        //{
+        //    mon.Die();
+        //}
+
+        cc.radius += Time.deltaTime / 2;
 
         yield return new WaitForSeconds(coolTime);
         CanCast = true;
@@ -60,15 +64,21 @@ public class Pentagram : Weapon
         //잠깐 
 
 
-
     }
 
     void FadeOut()
     {
         //잠깐 
 
-      
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Monster")
+        {
+            collision.GetComponent<Monster>().Die();
+        }
     }
 
 

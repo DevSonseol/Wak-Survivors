@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Lightening : Weapon
 {
+
+    private int countMonster;
+
     void Awake()
     {
         if (player == null)
@@ -39,7 +42,7 @@ public class Lightening : Weapon
         for (int i = 0; i < bulletCount; i++)
         {
             yield return new WaitForSeconds(castdelayTime);
-            Shoot();
+            Shoot(i);
         }
 
 
@@ -49,18 +52,43 @@ public class Lightening : Weapon
     }
 
 
-    private void Shoot()
+    private void Shoot(int index)
     {
-        //첫번쨰 죽이자
-        if (MonsterPool.Instance.nerestTarget == null)
+        //초기화
+        countMonster = 0;
+
+        Transform[] monsters = MonsterPool.Instance.gameObject.GetComponentsInChildren<Transform>();
+
+        int childCount = MonsterPool.Instance.gameObject.transform.childCount;
+
+        Monster target = null; 
+
+        foreach(Transform mon in monsters)
+        {
+            if(mon.gameObject.activeSelf == true )
+            {
+                if(index == countMonster)
+                {
+                    target = mon.gameObject.GetComponent<Monster>();
+
+                    break;
+                }
+
+                countMonster++;
+            }
+        }
+
+        if (target == null)
             return;
+        else
+        {
+            Vector3 dir = MonsterPool.Instance.nerestTarget.transform.position - player.transform.position;
 
-        Vector3 dir = MonsterPool.Instance.nerestTarget.transform.position - player.transform.position;
+            var bullet = ObjectPool.GetBullet(BulletCategory.Lightening) as LighteningBullet;
+            bullet.SetBulletStat(damage, duration, speed);
+            bullet.Shoot(target);
+        }
 
-        var bullet = ObjectPool.GetBullet(BulletCategory.Lightening);
-        bullet.transform.position = transform.position + dir.normalized;
-        bullet.SetBulletStat(damage, duration, speed);
-        bullet.Shoot(dir.normalized);
     }
 
     public override void LevelUp()
