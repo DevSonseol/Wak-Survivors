@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum Weapons
 {
-    Whip, MagicWand, Knife, Axe, Cross, Bible, FireWand, Garlic, SantaWater, RuneTracer, LightingRing, Pentagram, Peachone
+    Whip, MagicWand, Knife, Axe, Cross, Bible, FireWand, Garlic, SantaWater, RuneTracer, LightingRing, Pentagram, Gun , Peachone
 }
 
 
