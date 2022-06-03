@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum BulletCategory
 {
-    MagicWand , Knife , Axe ,Cross , Bible ,FireWand ,SantaWater , RuneTracer , Lightening
+    MagicWand , Knife , Axe ,Cross , Bible ,FireWand ,SantaWater , RuneTracer , Lightening ,Gun
 }
 
 public class ObjectPool :  MonoBehaviour

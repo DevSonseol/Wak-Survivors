@@ -94,10 +94,12 @@
     <Compile Include="Assets\Scripts\Lobby\BuyButton.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\Peachone.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\CrossBullet.cs" />
+    <Compile Include="Assets\Scripts\Ingame\Weapons\WeaponGun.cs" />
     <Compile Include="Assets\Shared\Scripts\AdjustTimeScale.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\SantaWater.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\Bible.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\FireWand.cs" />
+    <Compile Include="Assets\Scripts\Ingame\Weapons\GunBullet.cs" />
     <Compile Include="Assets\Scripts\Lobby\PowerUpButton.cs" />
     <Compile Include="Assets\Shared\Ramps\Runtime\RampAsset.cs" />
     <Compile Include="Assets\Scripts\Roullte\Roulette.cs" />
@@ -126,8 +128,6 @@
     <Compile Include="Assets\Scripts\MonsterPool.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\Pentagram.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\FireWandBullet.cs" />
-    <Compile Include="Assets\Scripts\Ingame\Weapons\WeaponGun.cs" />
-    <Compile Include="Assets\Scripts\Ingame\Weapons\GunBullet.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
