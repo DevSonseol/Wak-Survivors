@@ -35,8 +35,10 @@ public class GunBullet : Bullet
             CancelInvoke("DestroyBullet");
 
             DestroyBullet();
+            //StartCoroutine(WaitDestroyBullet());
+
             //충돌 후 데미지 주기
-            Debug.Log("MagicWandBullet OnTriggerEnter2D 몬스터 충돌");
+            Debug.Log("GunBullet OnTriggerEnter2D 몬스터 충돌");
             collision.GetComponent<Monster>().Die();
         }
     }

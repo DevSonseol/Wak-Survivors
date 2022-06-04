@@ -53,22 +53,22 @@ public class ObjectPool :  MonoBehaviour
         newBullet.gameObject.SetActive(false);
         return newBullet;
 
+
     }
 
     public static Bullet GetBullet(BulletCategory _BC)
     {
-        Queue<Bullet> bulletpool = Instance.poolingBulletQueueList[(int)_BC];
+        //Queue<Bullet> bulletpool = Instance.poolingBulletQueueList[(int)_BC];
 
-        if (bulletpool.Count > 0)
+        if (Instance.poolingBulletQueueList[(int)_BC].Count > 0)
         {
-            var bullet = bulletpool.Dequeue();
+            var bullet = Instance.poolingBulletQueueList[(int)_BC].Dequeue();
             bullet.gameObject.SetActive(true);
             return bullet;
         }
         else
         {
             var bullet = Instance.CreateBullet(_BC);
-            bulletpool.Enqueue(bullet);
             bullet.transform.SetParent(ObjectPool.Instance.transform);
             bullet.gameObject.SetActive(true);
             return bullet;
@@ -78,13 +78,10 @@ public class ObjectPool :  MonoBehaviour
 
     public static void ReturnBullet(Bullet bullet , BulletCategory _BC)
     {
-        Queue<Bullet> bulletpool = Instance.poolingBulletQueueList[(int)_BC];
-
+        Queue<Bullet> bulletpool = Instance.poolingBulletQueueList[(int)_BC];        
         bullet.gameObject.SetActive(false);
         bulletpool.Enqueue(bullet);
 
-
     }
-
 
 }

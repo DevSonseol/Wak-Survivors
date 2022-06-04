@@ -26,7 +26,6 @@ public class WeaponGun : Weapon
         //플레이어 위치로 이동
         transform.position = player.transform.position;
 
-
         if (CanCast)
         {
             CanCast = false;
@@ -48,10 +47,9 @@ public class WeaponGun : Weapon
             Shoot(new Vector3(-1, 1, 0));
 
             Shoot(new Vector3(-1, -1, 0));
- 
 
             colorSwitch = !colorSwitch;
-            yield return new WaitForSeconds(castdelayTime);
+            yield return YieldInstructionCache.WaitForSeconds(castdelayTime);
         }
 
         yield return new WaitForSeconds(coolTime - (bulletCount * castdelayTime));

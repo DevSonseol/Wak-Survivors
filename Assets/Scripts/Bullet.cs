@@ -29,7 +29,17 @@ public abstract class Bullet : MonoBehaviour
     protected void DestroyBullet()
     {
         ObjectPool.ReturnBullet(this, this.category);
+
+        //StartCoroutine(WaitDestroyBullet());
+
     }
+
+    protected IEnumerator WaitDestroyBullet()
+    {
+        yield return new WaitForEndOfFrame();
+        ObjectPool.ReturnBullet(this, this.category);
+    }
+
 
 
     protected virtual void Update()
