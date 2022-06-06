@@ -121,6 +121,7 @@
     <Compile Include="Assets\Scripts\Lobby\LobbyUI.cs" />
     <Compile Include="Assets\Scripts\Ingame\PowerUISlot.cs" />
     <Compile Include="Assets\Scripts\Ingame\Coin.cs" />
+    <Compile Include="Assets\Scripts\YieldInstructionCache.cs" />
     <Compile Include="Assets\Scripts\Ingame\Power.cs" />
     <Compile Include="Assets\Scripts\Lobby\StatText.cs" />
     <Compile Include="Assets\Scripts\Shooter.cs" />
@@ -128,7 +129,7 @@
     <Compile Include="Assets\Scripts\MonsterPool.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\Pentagram.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\FireWandBullet.cs" />
-    <Compile Include="Assets\Scripts\YieldInstructionCache.cs" />
+    <Compile Include="Assets\Scripts\Ingame\WeaponSelectUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
