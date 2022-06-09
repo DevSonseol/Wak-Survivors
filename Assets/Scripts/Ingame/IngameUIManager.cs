@@ -11,7 +11,11 @@ public class IngameUIManager : MonoBehaviour
     private WeaponUI weaponUI;
     public WeaponUI WeaponUI { get { return weaponUI; } }
 
-  
+    [SerializeField]
+    public WeaponSelectUI weaponSelectUI;
+
+    public WeaponSelectUI WeaponSelectUI { get { return weaponSelectUI; } }
+
     private void Awake()
     {
         Instance = this;
@@ -21,9 +25,7 @@ public class IngameUIManager : MonoBehaviour
         
     }
 
-  
-    void Update()
-    {
-        
-    }
+
+
+
 }
