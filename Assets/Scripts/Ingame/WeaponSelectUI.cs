@@ -8,7 +8,7 @@ public class WeaponSelectUI : MonoBehaviour
 
     public GameObject weaponSelectUI;
 
-
+    public WeaponSelectButton[] buttons;
 
     void Start()
     {
