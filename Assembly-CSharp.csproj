@@ -111,6 +111,7 @@
     <Compile Include="Assets\Shared\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\Ingame\IngameUIManager.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\MagicWandBullet.cs" />
+    <Compile Include="Assets\Scripts\Ingame\WeaponSelectButton.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\Whip.cs" />
     <Compile Include="Assets\Scripts\Roullte\ButtonSpin.cs" />
     <Compile Include="Assets\Scripts\Roullte\RoulettePiece.cs" />
@@ -130,7 +131,6 @@
     <Compile Include="Assets\Scripts\MonsterPool.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\Pentagram.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\FireWandBullet.cs" />
-    <Compile Include="Assets\Scripts\Ingame\WeaponSelectButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
