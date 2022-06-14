@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6377974665233621569}
   - component: {fileID: 6377974665233621568}
   - component: {fileID: 6377974665233621570}
+  - component: {fileID: 1857745642114902636}
   m_Layer: 8
   m_Name: Whip
   m_TagString: Untagged
@@ -123,6 +124,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6377974665233621580}
   m_CullTransparentMesh: 1
+--- !u!114 &1857745642114902636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6377974665233621580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c85b4d335d39c34f814ba2846555c0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
 --- !u!1 &6377974665725674636
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,15 +190,19 @@ MonoBehaviour:
   MaxLevel: 8
   Level: 1
   damage: 10
-  duratation: 1
+  duration: 0
   coolTime: 2
   speed: 0
+  maxBulletCount: 8
+  castdelayTime: 0.05
+  BulletPrefab: {fileID: 0}
+  bulletCount: 1
   CanCast: 1
   whips:
-  - {fileID: 6377974665233621580}
-  - {fileID: 6377974666498837092}
-  - {fileID: 6377974666224837052}
-  - {fileID: 6377974667027982205}
+  - {fileID: 1857745642114902636}
+  - {fileID: 6123779684403988509}
+  - {fileID: 494765927269988169}
+  - {fileID: 4717577756293118049}
   isActive: 01000000
 --- !u!1 &6377974666224837052
 GameObject:
@@ -197,6 +215,7 @@ GameObject:
   - component: {fileID: 6377974666224837040}
   - component: {fileID: 6377974666224837043}
   - component: {fileID: 6377974666224837042}
+  - component: {fileID: 494765927269988169}
   m_Layer: 8
   m_Name: Whip (2)
   m_TagString: Untagged
@@ -295,6 +314,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 0.54}
   m_EdgeRadius: 0
+--- !u!114 &494765927269988169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6377974666224837052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c85b4d335d39c34f814ba2846555c0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
 --- !u!1 &6377974666498837092
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,6 +338,7 @@ GameObject:
   - component: {fileID: 6377974666498837112}
   - component: {fileID: 6377974666498837115}
   - component: {fileID: 6377974666498837114}
+  - component: {fileID: 6123779684403988509}
   m_Layer: 8
   m_Name: Whip (1)
   m_TagString: Untagged
@@ -404,6 +437,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 0.54}
   m_EdgeRadius: 0
+--- !u!114 &6123779684403988509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6377974666498837092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c85b4d335d39c34f814ba2846555c0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
 --- !u!1 &6377974667027982205
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,6 +461,7 @@ GameObject:
   - component: {fileID: 6377974667027982193}
   - component: {fileID: 6377974667027982192}
   - component: {fileID: 6377974667027982195}
+  - component: {fileID: 4717577756293118049}
   m_Layer: 8
   m_Name: Whip (3)
   m_TagString: Untagged
@@ -513,3 +560,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 0.54}
   m_EdgeRadius: 0
+--- !u!114 &4717577756293118049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6377974667027982205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c85b4d335d39c34f814ba2846555c0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10

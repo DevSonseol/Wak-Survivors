@@ -36,7 +36,7 @@ public class AxeBullet : Bullet
         //중력 초기화
         ResetForce();
         //랜덤으로 살짝 어긋나게
-        float random = Random.RandomRange(0f, 2f);
+        float random = Random.Range(0f, 2f);
 
         direction = new Vector3(dir.x * random, dir.y, 0);
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
@@ -60,9 +60,7 @@ public class AxeBullet : Bullet
     private void ResetForce()
     {
         force = fixedforce;
-        force -= Random.RandomRange(0f, 5f);
-
-
+        force -= Random.Range(0f, 5f);
         
     }
 }

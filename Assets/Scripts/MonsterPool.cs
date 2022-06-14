@@ -13,7 +13,7 @@ public class MonsterPool : MonoBehaviour
     [SerializeField]
     private Queue<Monster> poolingMonsterQueue = new Queue<Monster>();
 
-    private bool isSpawn = true;
+    //private bool isSpawn = true;
 
     public Monster nerestTarget;
 

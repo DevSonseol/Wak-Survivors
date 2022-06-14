@@ -7,8 +7,6 @@ public class RuneTracerBullet : Bullet
     [SerializeField]
     private GameObject player;
 
-    private Camera camera;
-
     private bool canChange = true;
 
     enum side
@@ -18,7 +16,6 @@ public class RuneTracerBullet : Bullet
 
     void Start()
     {
-        camera = Camera.main;
         player = GameObject.Find("Player");
     }
 

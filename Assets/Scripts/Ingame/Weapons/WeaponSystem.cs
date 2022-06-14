@@ -15,6 +15,8 @@ public class WeaponSystem : MonoBehaviour
     [SerializeField]
     private List<Weapon> weaponList = new List<Weapon>();
 
+    [SerializeField]
+    private List<Weapon> playerWeaponList = new List<Weapon>();
 
 
     private void Awake()

@@ -8,7 +8,7 @@ public class Whip : Weapon
     private const float castdelayTinme = 0.15f;
 
     [SerializeField]
-    private GameObject[] whips;
+    private WhipBullet[] whips;
 
     [SerializeField]
     private bool[] isActive = new bool[4];
@@ -59,19 +59,17 @@ public class Whip : Weapon
                 StartCoroutine(FadeIn(whips[i]));
             }
             yield return new WaitForSeconds(castdelayTinme);
-            Debug.Log("whip");
         }
 
         yield return new WaitForSeconds(coolTime-( castdelayTinme* maxWhipCount));
-        Debug.Log("cool");
 
         CanCast = true;
     }
 
 
-    private IEnumerator FadeIn(GameObject go)
+    private IEnumerator FadeIn(WhipBullet go)
     {
-        go.SetActive(true);
+        go.gameObject.SetActive(true);
         SpriteRenderer sr = go.GetComponent<SpriteRenderer>();
         Color color = sr.material.color;
         color.a = 0;
@@ -84,8 +82,10 @@ public class Whip : Weapon
         }
 
         color.a = 0;
-        go.SetActive(false);
+        go.gameObject.SetActive(false);
     }
+
+
 
     public override void LevelUp()
     {
