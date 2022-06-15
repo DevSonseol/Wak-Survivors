@@ -134,6 +134,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a849948dcf74746479b5024128b7ee83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monsterCategory: 0
+  sprites:
+  - {fileID: 21300000, guid: 7e40928ae6f49904f964fc4d3d987bd0, type: 3}
+  - {fileID: 21300000, guid: 461895722810c5f4c8165eb1cf55453f, type: 3}
+  - {fileID: 21300000, guid: 8fe3bb5b4aaf60244992a84e9f893929, type: 3}
+  - {fileID: 21300000, guid: 1b223f6cb404c014b89a74be49674989, type: 3}
+  - {fileID: 21300000, guid: d7c98bfca594c83478e3516d41895482, type: 3}
+  - {fileID: 21300000, guid: 720f4afe7fa2f7a40a95f01072da9182, type: 3}
+  - {fileID: 21300000, guid: 16c6169cc1c039d4890888e197db6b1e, type: 3}
+  - {fileID: 21300000, guid: f7ef6cb466235f042937c7a76b9b8179, type: 3}
+  - {fileID: 21300000, guid: 36dd687b12186394d8041ab9dec1d8a8, type: 3}
+  - {fileID: 21300000, guid: 15ebe45cb2172284e946fcd21e74b2d5, type: 3}
+  - {fileID: 21300000, guid: 7200861add2c56745a42b8c012d678c8, type: 3}
   target: {fileID: 0}
   HP: 100
   damage: 10

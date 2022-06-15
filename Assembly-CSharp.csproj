@@ -89,7 +89,7 @@
     <Compile Include="Assets\Scripts\Ingame\FollowingCamera.cs" />
     <Compile Include="Assets\Scripts\Lobby\SelectButton.cs" />
     <Compile Include="Assets\Garlic.cs" />
-    <Compile Include="Assets\Scripts\Ingame\Monster.cs" />
+    <Compile Include="Assets\Scripts\Ingame\Monsters\Monster.cs" />
     <Compile Include="Assets\Scripts\TileMap.cs" />
     <Compile Include="Assets\Scripts\Ingame\WeaponSelectUI.cs" />
     <Compile Include="Assets\Scripts\Lobby\BuyButton.cs" />
@@ -130,8 +130,9 @@
     <Compile Include="Assets\Scripts\Ingame\WeaponUI.cs" />
     <Compile Include="Assets\Scripts\MonsterPool.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\Pentagram.cs" />
-    <Compile Include="Assets\Scripts\Ingame\Weapons\FireWandBullet.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\WhipBullet.cs" />
+    <Compile Include="Assets\Scripts\Ingame\Weapons\FireWandBullet.cs" />
+    <Compile Include="Assets\Scripts\Ingame\Monsters\MonsterBird.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
