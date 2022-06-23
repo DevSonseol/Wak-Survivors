@@ -8,8 +8,10 @@ public abstract class Weapon : MonoBehaviour
     [SerializeField]
     protected GameObject player;
 
+    public Sprite _sprite;
+
     [SerializeField]
-    protected Sprite sprite;
+    public string _text;
 
     [SerializeField]
     protected Weapons weapon;

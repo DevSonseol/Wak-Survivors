@@ -185,7 +185,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  sprite: {fileID: 21300000, guid: a2f2a64254a3a024eb72b130247833ad, type: 3}
+  _sprite: {fileID: 21300000, guid: 8ccf90e1abe03c34eba00fec4509be22, type: 3}
+  _text: "\uCC44\uCC0D\uC73C\uB85C \uB370\uBBF8\uC9C0\uB97C \uC900\uB2E4"
   weapon: 0
   MaxLevel: 8
   Level: 1

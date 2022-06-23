@@ -15,24 +15,42 @@ public class WeaponSystem : MonoBehaviour
     [SerializeField]
     private List<Weapon> weaponList = new List<Weapon>();
 
-    [SerializeField]
-    private List<Weapon> playerWeaponList = new List<Weapon>();
+    public List<Weapon> WeaponList { get { return weaponList; } }
 
+
+ 
+    public List<Weapon> playerWeaponList = new List<Weapon>();
 
     private void Awake()
     {
         Instance = this;
+
     }
 
 
-    void Start()
+
+    public void Add_Weapon(Weapon _weapon)
     {
-        
+
+        foreach(Weapon weapon in playerWeaponList)
+        {
+            if(weapon == _weapon)
+            {
+                weapon.LevelUp();
+                return;
+            }
+        }
+
+        foreach (Weapon weapon in weaponList)
+        {
+            if (weapon == _weapon)
+            {
+                var wp = Instantiate(weapon, GameObject.Find("Player").transform);
+                playerWeaponList.Add(weapon);
+                wp.gameObject.SetActive(true);
+            }
+        }
+
     }
 
-  
-    void Update()
-    {
-        
-    }
 }

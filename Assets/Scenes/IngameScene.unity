@@ -302,6 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99f5b12f4574ef64b9dd140bfb20c4fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weapon: {fileID: 0}
   text: {fileID: 1890202311}
   image: {fileID: 1019803257}
 --- !u!114 &27531202
@@ -609,6 +610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99f5b12f4574ef64b9dd140bfb20c4fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weapon: {fileID: 0}
   text: {fileID: 215998862}
   image: {fileID: 1037833834}
 --- !u!114 &143250748
@@ -7574,6 +7576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99f5b12f4574ef64b9dd140bfb20c4fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weapon: {fileID: 0}
   text: {fileID: 1415041050}
   image: {fileID: 308222943}
 --- !u!114 &572847342
@@ -8153,7 +8156,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &728930004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9805,6 +9808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99f5b12f4574ef64b9dd140bfb20c4fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weapon: {fileID: 0}
   text: {fileID: 2112999042}
   image: {fileID: 601884657}
 --- !u!4 &1349145694 stripped

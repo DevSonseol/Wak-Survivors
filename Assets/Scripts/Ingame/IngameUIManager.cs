@@ -6,7 +6,6 @@ public class IngameUIManager : MonoBehaviour
 {
     public static IngameUIManager Instance;
 
-
     [SerializeField]
     private WeaponUI weaponUI;
     public WeaponUI WeaponUI { get { return weaponUI; } }
@@ -22,10 +21,13 @@ public class IngameUIManager : MonoBehaviour
     }
     void Start()
     {
-        
+        Invoke("opneWS", 1f);
     }
 
-
+    void opneWS()
+    {
+        weaponSelectUI.Open_WSUI();
+    }
 
 
 }
