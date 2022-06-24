@@ -10,11 +10,9 @@ public abstract class Weapon : MonoBehaviour
 
     public Sprite _sprite;
 
-    [SerializeField]
     public string _text;
 
-    [SerializeField]
-    protected Weapons weapon;
+    public Weapons weaponType;
 
     [SerializeField]
     protected int MaxLevel = 8;

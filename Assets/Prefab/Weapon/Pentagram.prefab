@@ -279,7 +279,7 @@ MonoBehaviour:
   player: {fileID: 0}
   _sprite: {fileID: 21300000, guid: d2d03fa491e79384baa5ba97429ef371, type: 3}
   _text: "\uAC00"
-  weapon: 0
+  weaponType: 11
   MaxLevel: 8
   Level: 1
   damage: 0

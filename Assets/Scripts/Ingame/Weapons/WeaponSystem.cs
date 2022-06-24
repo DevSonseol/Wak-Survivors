@@ -34,7 +34,7 @@ public class WeaponSystem : MonoBehaviour
 
         foreach(Weapon weapon in playerWeaponList)
         {
-            if(weapon == _weapon)
+            if(weapon.weaponType == _weapon.weaponType)
             {
                 weapon.LevelUp();
                 return;
@@ -45,8 +45,8 @@ public class WeaponSystem : MonoBehaviour
         {
             if (weapon == _weapon)
             {
-                var wp = Instantiate(weapon, GameObject.Find("Player").transform);
-                playerWeaponList.Add(weapon);
+                var wp = Instantiate(weapon, GameObject.Find("WeaponSystem").transform);
+                playerWeaponList.Add(wp);
                 wp.gameObject.SetActive(true);
             }
         }

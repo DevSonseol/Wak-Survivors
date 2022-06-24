@@ -21,7 +21,7 @@ public class IngameUIManager : MonoBehaviour
     }
     void Start()
     {
-        Invoke("opneWS", 1f);
+        InvokeRepeating("opneWS", 1f,2f);
     }
 
     void opneWS()

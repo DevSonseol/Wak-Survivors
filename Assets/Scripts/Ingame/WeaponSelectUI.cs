@@ -38,9 +38,13 @@ public class WeaponSelectUI : MonoBehaviour
         CreateUnDuplicateRandom();
 
         //weaponsystems에서 정보 가져오고 
-        buttons[0].SettingButton(WeaponSystem.Instance.WeaponList[weaponNumberList[0]]);
-        buttons[1].SettingButton(WeaponSystem.Instance.WeaponList[weaponNumberList[1]]);
-        buttons[2].SettingButton(WeaponSystem.Instance.WeaponList[weaponNumberList[2]]);
+        buttons[0].SettingButton(WeaponSystem.Instance.WeaponList[0]);
+        buttons[1].SettingButton(WeaponSystem.Instance.WeaponList[10]);
+        buttons[2].SettingButton(WeaponSystem.Instance.WeaponList[2]);
+
+        //buttons[0].SettingButton(WeaponSystem.Instance.WeaponList[weaponNumberList[0]]);
+        //buttons[1].SettingButton(WeaponSystem.Instance.WeaponList[weaponNumberList[1]]);
+        //buttons[2].SettingButton(WeaponSystem.Instance.WeaponList[weaponNumberList[2]]);
 
     }
 

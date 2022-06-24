@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6377974665233621568}
   - component: {fileID: 6377974665233621570}
   - component: {fileID: 1857745642114902636}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Whip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6377974665725674626}
   - component: {fileID: 6377974665725674637}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: WeaponWhip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ MonoBehaviour:
   MaxLevel: 8
   Level: 1
   damage: 10
-  duration: 0
+  duration: 1
   coolTime: 2
   speed: 0
   maxBulletCount: 8
@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 6377974666224837043}
   - component: {fileID: 6377974666224837042}
   - component: {fileID: 494765927269988169}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Whip (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -340,7 +340,7 @@ GameObject:
   - component: {fileID: 6377974666498837115}
   - component: {fileID: 6377974666498837114}
   - component: {fileID: 6123779684403988509}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Whip (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -463,7 +463,7 @@ GameObject:
   - component: {fileID: 6377974667027982192}
   - component: {fileID: 6377974667027982195}
   - component: {fileID: 4717577756293118049}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Whip (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

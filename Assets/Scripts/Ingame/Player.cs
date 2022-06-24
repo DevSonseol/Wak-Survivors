@@ -51,7 +51,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         playerDir = new Vector3(1, 0, 0);
-        moveSpeed = PlayerData.Instacne.Stat.MoveSpeed;
+        moveSpeed = 2f;//PlayerData.Instacne.Stat.MoveSpeed;
         HP = PlayerData.Instacne.Stat.MaxHealth;
         maxHP = PlayerData.Instacne.Stat.MaxHealth;
 

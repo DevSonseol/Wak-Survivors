@@ -46,7 +46,7 @@ MonoBehaviour:
   player: {fileID: 0}
   _sprite: {fileID: 21300000, guid: 29bd20a257ba10541b23db5350021656, type: 3}
   _text: "\uACE0\uC138\uAD6C\uC758 \uBA38\uB9AC\uD540"
-  weapon: 4
+  weaponType: 4
   MaxLevel: 8
   Level: 1
   damage: 5
@@ -57,5 +57,5 @@ MonoBehaviour:
   castdelayTime: 0.3
   BulletPrefab: {fileID: 8210433303312950878, guid: 9c3f5bbe91ac2cc478854347c614c408,
     type: 3}
-  bulletCount: 2
+  bulletCount: 1
   CanCast: 1
