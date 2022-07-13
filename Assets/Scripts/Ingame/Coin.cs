@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Coin : MonoBehaviour
 {
+    public Sprite[] sprites;
+
+    SpriteRenderer sr;
+
     [SerializeField]
-    private float EXP;
+    private int EXP = 1;
 
     [SerializeField]
     private GameObject target;
@@ -15,12 +20,47 @@ public class Coin : MonoBehaviour
 
     private Vector3 moveDirection = Vector3.zero;
 
-    void Start()
+    private void Awake()
     {
+        sr = GetComponent<SpriteRenderer>();
     }
 
-  
+    public void SetCoin(int exp)
+    {
+        EXP = exp;
+
+        switch (exp)
+        {
+            case 1:
+                sr.sprite = sprites[0];
+                break;
+            case 2:
+                sr.sprite = sprites[1];
+                break;
+            case 3:
+                sr.sprite = sprites[2];
+                break;
+            case 4:
+                sr.sprite = sprites[3];
+                break;
+            case 5:
+                sr.sprite = sprites[4];
+                break;
+        }
+
+    }
+
+    void Start()
+    {
+
+    }
+
     void Update()
+    {
+        MovingToTarget();
+    }
+
+    void MovingToTarget()
     {
         if (target == null) //≈∏∞Ÿ¿Ã æ¯¿∏∏È ∏Æ≈œ
             return;
@@ -28,13 +68,13 @@ public class Coin : MonoBehaviour
         moveDirection = target.transform.position - transform.position; //πÊ«‚∫§≈Õ
         transform.position += moveDirection.normalized * speed * Time.deltaTime;
 
-        float dist = Vector3.Distance(target.transform.position,transform.position);
+        float dist = Vector3.Distance(target.transform.position, transform.position);
 
-        if(dist < 0.1f)
+        if (dist < 0.1f)
         {
-            Destroy(this.gameObject);
+            PlayerData.Instance.GainCoin(EXP);
+            ReturnToPooling();
         }
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -48,18 +88,11 @@ public class Coin : MonoBehaviour
 
             target = collision.gameObject;
         }
-
     }
 
-    //private void OnCollisionExit2D(Collision2D collision)
-    //{
-    //    Debug.Log("¿Ã∫¡ ¬°¬°¿Ã µø¿¸¡ª");
-
-    //    target = collision.collider.gameObject;
-    //}
-
-
-
-
+    public void ReturnToPooling()
+    {
+        CoinPool.ReturnCoin(this);
+    }
 
 }

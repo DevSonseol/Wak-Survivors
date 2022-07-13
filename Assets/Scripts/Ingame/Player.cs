@@ -52,10 +52,10 @@ public class Player : MonoBehaviour
     {
         playerDir = new Vector3(1, 0, 0);
         moveSpeed = 2f;//PlayerData.Instacne.Stat.MoveSpeed;
-        HP = PlayerData.Instacne.Stat.MaxHealth;
-        maxHP = PlayerData.Instacne.Stat.MaxHealth;
+        HP = PlayerData.Instance.Stat.MaxHealth;
+        maxHP = PlayerData.Instance.Stat.MaxHealth;
 
-        circleCollider2D.radius = normalSize * PlayerData.Instacne.Stat.Magnet;
+        circleCollider2D.radius = normalSize * PlayerData.Instance.Stat.Magnet;
     }
 
 
@@ -111,7 +111,5 @@ public class Player : MonoBehaviour
     {
         HP -= damage;
     }
-
-
 
 }

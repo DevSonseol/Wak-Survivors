@@ -6390,7 +6390,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 200000
+  m_Text: 0
 --- !u!222 &349539449
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8149,30 +8149,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 728930005}
-  - component: {fileID: 728930004}
   m_Layer: 0
-  m_Name: MonsterPool
+  m_Name: ObjectPools
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &728930004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 728930003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1c6c294c3f3c5e4fb61394a26c8b759, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  monsterPrefab: {fileID: 618115071}
-  nerestTarget: {fileID: 0}
-  MonsterCount: 0
 --- !u!4 &728930005
 Transform:
   m_ObjectHideFlags: 0
@@ -8183,7 +8166,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1336940922}
+  - {fileID: 1892351712}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9811,6 +9796,53 @@ MonoBehaviour:
   weapon: {fileID: 0}
   text: {fileID: 2112999042}
   image: {fileID: 601884657}
+--- !u!1 &1336940921
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1336940922}
+  - component: {fileID: 1336940923}
+  m_Layer: 0
+  m_Name: MonsterPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1336940922
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336940921}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 728930005}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1336940923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336940921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c6c294c3f3c5e4fb61394a26c8b759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  monsterPrefab: {fileID: 618115071}
+  nerestTarget: {fileID: 0}
+  MonsterCount: 0
 --- !u!4 &1349145694 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3275005792780454533, guid: 1f116db61700ac54fba8a09e268cde05,
@@ -11093,6 +11125,7 @@ GameObject:
   - component: {fileID: 1722963174}
   - component: {fileID: 1722963176}
   - component: {fileID: 1722963175}
+  - component: {fileID: 1722963177}
   m_Layer: 5
   m_Name: CoinUI
   m_TagString: Untagged
@@ -11158,6 +11191,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1722963173}
   m_CullTransparentMesh: 1
+--- !u!114 &1722963177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722963173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c782ea83dcaae4db5abee2c5f84258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 349539448}
 --- !u!1 &1755101694
 GameObject:
   m_ObjectHideFlags: 0
@@ -11715,6 +11761,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890202309}
   m_CullTransparentMesh: 1
+--- !u!1 &1892351711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1892351712}
+  - component: {fileID: 1892351713}
+  m_Layer: 0
+  m_Name: CoinPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1892351712
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892351711}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 728930005}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1892351713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892351711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5edb0c2b78c5bf14d8de1e7a52dbd715, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 397513052}
+  CoinPrefab: {fileID: 3489433060624564428, guid: d745537c1bde3ab4c995ecbf0a517f26,
+    type: 3}
+  CoinCount: 10
 --- !u!1 &1921380496
 GameObject:
   m_ObjectHideFlags: 0

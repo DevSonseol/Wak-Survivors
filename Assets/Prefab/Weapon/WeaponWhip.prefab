@@ -187,12 +187,12 @@ MonoBehaviour:
   player: {fileID: 0}
   _sprite: {fileID: 21300000, guid: 8ccf90e1abe03c34eba00fec4509be22, type: 3}
   _text: "\uCC44\uCC0D\uC73C\uB85C \uB370\uBBF8\uC9C0\uB97C \uC900\uB2E4"
-  weapon: 0
+  weaponType: 0
   MaxLevel: 8
   Level: 1
   damage: 10
-  duration: 1
-  coolTime: 2
+  duration: 0.5
+  coolTime: 1
   speed: 0
   maxBulletCount: 8
   castdelayTime: 0.05

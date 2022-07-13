@@ -96,7 +96,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86455fd3ddc2ded4db75d347dd86eea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EXP: 0
+  sprites:
+  - {fileID: 21300000, guid: c180401f3b79b18499e589ad3ff86f03, type: 3}
+  - {fileID: 21300000, guid: 04ec33f8343d814488c3667e0b78e1ea, type: 3}
+  - {fileID: 21300000, guid: 6879f38cbcd5cd04b8162b68b05e85eb, type: 3}
+  - {fileID: 21300000, guid: bf4b9eee043fadd4a9442d6457422587, type: 3}
+  - {fileID: 21300000, guid: f5e5ca0aeadbc0340b3608c6c35a87fa, type: 3}
+  EXP: 1
   target: {fileID: 0}
   speed: 10
 --- !u!58 &3489433060624564425

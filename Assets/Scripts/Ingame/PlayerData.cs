@@ -6,7 +6,7 @@ public class PlayerData : MonoBehaviour
 {
     private static PlayerData instance;
 
-    public static PlayerData Instacne
+    public static PlayerData Instance
     {
         get
         {
@@ -31,8 +31,8 @@ public class PlayerData : MonoBehaviour
     }
 
 
-    [SerializeField]
-    private int coin;
+    
+    public int coin;
 
     public void GainCoin(int _coin)
     {

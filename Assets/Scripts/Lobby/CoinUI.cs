@@ -8,7 +8,6 @@ public class CoinUI : MonoBehaviour
     [SerializeField]
     private Text text;
 
-
     void Update()
     {
         text.text = GameSystem.Instance.Coin.ToString();

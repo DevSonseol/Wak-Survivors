@@ -133,6 +133,8 @@
     <Compile Include="Assets\Scripts\Ingame\Weapons\Pentagram.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\WhipBullet.cs" />
     <Compile Include="Assets\Scripts\Ingame\Weapons\FireWandBullet.cs" />
+    <Compile Include="Assets\Scripts\Ingame\CoinPool.cs" />
+    <Compile Include="Assets\Scripts\Ingame\IngameCoinUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
